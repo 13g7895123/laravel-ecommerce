@@ -2,6 +2,10 @@
     <div class="flex h-screen w-screen">
         <Sidebar/>
         <Right-content/>
+        <div>
+            <nav-bar/>
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 

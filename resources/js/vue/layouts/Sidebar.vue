@@ -11,9 +11,20 @@
         </div>
         <!-- SIDE BAR CONTENT -->
         <ul>
-            <li>Dashboard</li>
-            <li>Acocunt Settings</li>
-            <li>Pages</li>
+            <!-- <li v-for="item in items"><router-link to="/{{ item }}">{{ item }}</router-link></li> -->
+            <li><router-link to="/">Dashboard</router-link></li>
+            <li><router-link to="/account">Acocunt</router-link></li>
+            <li><router-link to="/settings">Settings</router-link></li>
         </ul>
     </div>
 </template>
+<script>
+export default{
+    data(){
+        return {
+            items:['Dashboard', 'Acocunt', 'Settings']
+        }
+    }
+}
+
+</script>

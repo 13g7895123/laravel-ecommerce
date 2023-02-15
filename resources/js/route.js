@@ -1,23 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import dashboard from './vue/Pages/Dashboard.vue';
-import account from './vue/Pages/Account.vue';
-import settings from './vue/Pages/Settings.vue';
 
 const routes = [
     {
         path: '/',
         name: 'dashboard',
-        component: dashboard
+        component: () => import('./vue/Pages/Dashboard.vue')
     },
     {
         path: '/account',
         name: 'account',
-        component: account
+        component: () => import('./vue/Pages/Account.vue')
     },
     {
         path: '/settings',
         name: 'settings',
-        component: settings
+        component: () => import('./vue/Pages/Settings.vue')
     }
 ];
 

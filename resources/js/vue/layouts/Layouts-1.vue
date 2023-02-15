@@ -1,9 +1,8 @@
 <template>
     <div class="flex h-screen w-screen">
         <Sidebar/>
-        <Right-content/>
-        <div>
-            <nav-bar/>
+        <div class="w-full">
+            <NavBar/>
             <router-view></router-view>
         </div>
     </div>
@@ -11,6 +10,7 @@
 
 <script setup>
     import Sidebar from './Sidebar.vue';
+    import NavBar from './Nav-bar.vue';
 </script>
 
 CREATE USER 'bonus_shoes_remote'@'122-117-114-34.hinet-ip.hinet.net' IDENTIFIED BY '820820';

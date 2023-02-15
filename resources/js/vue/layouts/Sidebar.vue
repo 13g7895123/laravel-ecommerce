@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[20%] flex flex-col border-1 border-orange-300">
+    <div class="w-[20%] flex flex-col border-1 border-orange-300 px-1">
         <!-- LOGO -->
         <div class="flex items-center p-3">
             <img
@@ -10,19 +10,48 @@
             <h1 class="text-2xl text-[#555] font-extrabold">MATERIO</h1>
         </div>
         <!-- SIDE BAR CONTENT -->
-        <ul>
-            <!-- <li v-for="item in items"><router-link to="/{{ item }}">{{ item }}</router-link></li> -->
-            <li><router-link to="/">Dashboard</router-link></li>
-            <li><router-link to="/account">Acocunt</router-link></li>
-            <li><router-link to="/settings">Settings</router-link></li>
-        </ul>
+        
+        <router-link 
+            v-for="item in items"
+            title= "item.name"
+            :to="{ path: item.path }"
+            class="sideBarItem"
+            >
+            <font-awesome-icon :icon=item.icon />
+            <span class="ml-3">{{ item.name }}</span>
+        </router-link>
+        
     </div>
 </template>
 <script>
 export default{
     data(){
         return {
-            items:['Dashboard', 'Acocunt', 'Settings']
+            items: [
+                {
+                    path: '/',
+                    name: 'Dashboard',
+                    icon: 'list'
+                },
+                {
+                    path: '/account',
+                    name: 'Account'
+                },
+                {
+                    path: '/settings',
+                    name: 'Settings'
+                },
+                {
+                    path: '/shop1',
+                    name: 'shop1',
+                    icon: 'fa-bag-shopping'
+                },
+                {
+                    path: '/shop2',
+                    name: 'shop2',
+                    icon: 'fa-bag-shopping'
+                },
+            ]
         }
     }
 }

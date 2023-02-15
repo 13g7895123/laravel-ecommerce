@@ -15,6 +15,16 @@ const routes = [
         path: '/settings',
         name: 'settings',
         component: () => import('./vue/Pages/Settings.vue')
+    },
+    {
+        path: '/shop1',
+        name: 'shop1',
+        component: () => import('./vue/Pages/shop1.vue')
+    },
+    {
+        path: '/shop2',
+        name: 'shop2',
+        component: () => import('./vue/Pages/shop2.vue')
     }
 ];
 
